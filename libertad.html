@@ -1,1 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Batería de Carro | Venta, Recarga e Instalación</title>
+  <meta name="description" content="Batería de carro nueva, recarga e instalación a domicilio. Diagnóstico, garantía y atención el mismo día. Pregunta por WhatsApp." />
+  <meta name="keywords" content="batería de carro, batería para auto, recarga de batería, instalación de batería, batería 12v, cambio de batería a domicilio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink:#0f1419; --panel:#171c22; --yellow:#ffcc00; --red:#e10600;
+      --bg:#f3f5f7; --muted:#5c6770; --line:#e2e6ea;
+      --shadow:0 18px 46px rgba(15,20,25,.14);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1140px,calc(100% - 32px));margin-inline:auto}
+    header{position:sticky;top:0;z-index:40;background:rgba(15,20,25,.94);backdrop-filter:blur(10px)}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800}
+    .mark{width:36px;height:36px;border-radius:10px;background:var(--yellow);color:#111;display:grid;place-items:center;font-weight:800}
+    .links{display:flex;gap:22px;color:#cfd6dd;font-size:14px;font-weight:500}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:12px 20px;font-weight:700;cursor:pointer;font-family:inherit;transition:.2s}
+    .btn-y{background:var(--yellow);color:#111}
+    .btn-y:hover{filter:brightness(1.05);transform:translateY(-1px)}
+    .btn-wa{background:#25D366;color:#fff}
+    .btn-dark{background:var(--ink);color:#fff}
+    .hero{position:relative;color:#fff;background:#0f1419}
+    .hero-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,12,16,.9) 0%,rgba(10,12,16,.55) 50%,rgba(10,12,16,.25) 100%),url("img/bateria-hero.jpg") center/cover no-repeat}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:36px;padding:58px 0;align-items:center}
+    .kicker{color:var(--yellow);font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+    h1{font-size:clamp(32px,5vw,54px);line-height:1.08;margin:10px 0 14px}
+    .lead{color:#d5dbe1;font-size:18px;max-width:540px}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+    .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+    .pill{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:7px 12px;font-size:13px}
+    .card{background:#fff;color:var(--ink);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+    label{display:block;font-size:13px;font-weight:600;margin:11px 0 6px}
+    input,select{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;background:#f7f9fb}
+    section{padding:70px 0}
+    .head{text-align:center;max-width:680px;margin:0 auto 36px}
+    .head h2{font-size:clamp(26px,4vw,38px)}
+    .head p{color:var(--muted);margin-top:10px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .svc{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.2s}
+    .svc:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .svc img{height:170px;width:100%;object-fit:cover}
+    .svc-body{padding:18px}
+    .svc h3{font-size:18px;margin-bottom:6px}
+    .svc p{color:var(--muted);font-size:15px}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+    .photo{border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+    .photo img{width:100%;height:400px;object-fit:cover}
+    .check{list-style:none;display:grid;gap:10px;margin-top:14px}
+    .check li{padding-left:26px;position:relative}
+    .check li:before{content:"⚡";position:absolute;left:0}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+    .num{color:#c9a000;font-weight:800;font-size:22px}
+    footer{background:var(--ink);color:#b7c0c8;padding:32px 0}
+    .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px}
+    .wa{position:fixed;right:16px;bottom:16px;z-index:50;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;font-size:28px;box-shadow:0 10px 28px rgba(37,211,102,.4)}
+    @media(max-width:900px){
+      .links{display:none}
+      .hero-grid,.grid3,.split,.steps{grid-template-columns:1fr}
+      .photo img{height:240px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio"><span class="mark">B</span> Batería Carro</a>
+      <nav class="links">
+        <a href="#servicios">Servicios</a>
+        <a href="#domicilio">A domicilio</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#pedir">Pedir</a>
+      </nav>
+      <a class="btn btn-y" href="#pedir">Cotizar batería</a>
+    </div>
+  </header>
 
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <div class="kicker">Venta · Recarga · Instalación</div>
+        <h1>Batería de carro que sí arranca.</h1>
+        <p class="lead">Te decimos si se recarga o se cambia. Batería nueva según el amperaje de tu auto, instalada y con garantía.</p>
+        <div class="actions">
+          <a class="btn btn-y" href="#pedir">Pedir ahora</a>
+          <a class="btn btn-wa" href="https://wa.me/573001112233?text=Hola%2C%20necesito%20bater%C3%ADa%20de%20carro" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <div class="pills">
+          <span class="pill">Diagnóstico en sitio</span>
+          <span class="pill">Instalación incluida</span>
+          <span class="pill">Servicio a domicilio</span>
+        </div>
+      </div>
+      <form class="card" id="leadForm">
+        <h3>¿Qué batería lleva tu carro?</h3>
+        <p style="color:var(--muted);font-size:14px">Te respondemos el mismo día.</p>
+        <label for="nombre">Nombre</label>
+        <input id="nombre" required placeholder="Tu nombre">
+        <label for="telefono">WhatsApp</label>
+        <input id="telefono" required placeholder="300 000 0000">
+        <label for="auto">Marca, modelo y año</label>
+        <input id="auto" required placeholder="Ej. Chevrolet Spark 2018">
+        <label for="servicio">Servicio</label>
+        <select id="servicio">
+          <option>Batería nueva + instalación</option>
+          <option>Recarga de batería</option>
+          <option>No arranca / diagnóstico</option>
+          <option>Servicio a domicilio</option>
+          <option>No sé cuál batería lleva</option>
+        </select>
+        <label for="zona">Zona</label>
+        <input id="zona" placeholder="Ciudad o barrio">
+        <button class="btn btn-y" type="submit" style="width:100%;margin-top:16px">Enviar por WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker" style="color:#b89600">Servicios</div>
+        <h2>Todo para la batería de tu carro</h2>
+        <p>No adivinamos. Probamos carga, arranque y alternador.</p>
+      </div>
+      <div class="grid3">
+        <article class="svc">
+          <img src="img/baterias.jpg" alt="Baterías de carro nuevas">
+          <div class="svc-body">
+            <h3>Batería nueva</h3>
+            <p>12V según Ah y medida de tu carro. Compactos, sedanes, SUVs y pickups.</p>
+          </div>
+        </article>
+        <article class="svc">
+          <img src="img/recarga.jpg" alt="Recarga de batería">
+          <div class="svc-body">
+            <h3>Recarga</h3>
+            <p>Si se descargó por luces o días parado, a veces no hay que cambiarla.</p>
+          </div>
+        </article>
+        <article class="svc">
+          <img src="img/instalacion.jpg" alt="Instalación de batería">
+          <div class="svc-body">
+            <h3>Instalación</h3>
+            <p>Cambio de bornes, apriete y prueba de arranque. Queda lista para circular.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="domicilio" style="background:#fff">
+    <div class="wrap split">
+      <div class="photo"><img src="img/domicilio.jpg" alt="Técnico cambiando batería a domicilio"></div>
+      <div>
+        <div class="kicker" style="color:#b89600">A domicilio</div>
+        <h2 style="font-size:clamp(28px,4vw,40px);margin:8px 0 12px">Si no arranca, vamos a ti.</h2>
+        <ul class="check">
+          <li>Prueba de voltaje en el sitio</li>
+          <li>Recarga o batería de reemplazo</li>
+          <li>Limpieza de bornes</li>
+          <li>Revisión rápida del alternador</li>
+        </ul>
+        <a class="btn btn-y" href="#pedir" style="margin-top:20px">Pedir visita</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="proceso">
+    <div class="wrap">
+      <div class="head"><h2>Así pedimos tu batería</h2></div>
+      <div class="steps">
+        <div class="step"><div class="num">01</div><h3>Escribes</h3><p>Marca, modelo y si arranca o no.</p></div>
+        <div class="step"><div class="num">02</div><h3>Cotizamos</h3><p>Te decimos amperaje, precio y tiempo.</p></div>
+        <div class="step"><div class="num">03</div><h3>Instalamos</h3><p>En taller o donde estés.</p></div>
+        <div class="step"><div class="num">04</div><h3>Garantía</h3><p>Arranque verificado y soporte.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pedir" style="background:#fff">
+    <div class="wrap" style="text-align:center">
+      <h2>Pide la batería de tu carro hoy</h2>
+      <p style="color:var(--muted);margin:10px auto 22px;max-width:480px">Mándanos foto de la batería vieja si la tienes a la mano.</p>
+      <a class="btn btn-wa" href="https://wa.me/573001112233?text=Hola%2C%20necesito%20bater%C3%ADa%20de%20carro" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot">
+      <div><strong style="color:#fff">Batería Carro</strong><br>Venta, recarga e instalación</div>
+      <div>Cambia el número 300 111 2233 antes de publicar</div>
+    </div>
+  </footer>
+  <a class="wa" href="https://wa.me/573001112233?text=Hola%2C%20necesito%20bater%C3%ADa%20de%20carro" target="_blank" rel="noopener">✆</a>
+  <script>
+    document.getElementById('leadForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const t = encodeURIComponent(
+        'Hola, soy ' + document.getElementById('nombre').value.trim() +
+        '. Necesito batería de carro.\nWhatsApp: ' + document.getElementById('telefono').value.trim() +
+        '\nAuto: ' + document.getElementById('auto').value.trim() +
+        '\nServicio: ' + document.getElementById('servicio').value +
+        '\nZona: ' + document.getElementById('zona').value.trim()
+      );
+      window.open('https://wa.me/573001112233?text=' + t, '_blank');
+    });
+  </script>
+</body>
+</html>
